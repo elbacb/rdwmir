@@ -1,0 +1,66 @@
+.caja{
+    position: relative;
+    background-color: #FFFFFF;
+    height: 800px;
+    width: 300px;
+}
+
+.cabeza{
+    position: relative;
+    background-color: #5A9FA0;
+    height: 300px;
+    width: 100%;
+}
+
+.ojo{
+    position: absolute;
+    top: 30%;
+    right: 0px;
+    background-color: #e1b68b;
+    height: 80px;
+    width: 80px;
+}
+
+.pupila{
+    position: absolute;
+    bottom: 50%;
+    right: 0px;
+    background-color: #000;
+    height: 16px;
+    width: 16px;
+}
+
+.boca{
+    position: absolute;
+    top: 70%;
+    right: 0px;
+    background-color: #ffc0cb;
+    height: 16px;
+    width: 110px;}
+
+.tronco{
+    background-color: #000;
+    height: 392px;
+    width:234px;
+}
+
+.brazo{
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    background-color: #ff0012;
+    height: 40px;
+    width: 160px;
+}
+
+div p {
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    margin-right:34px;
+    padding:20px;
+    border: 1px dashed #0030f8 ;
+    font-size: 21px;
+    text-align: center;
+    width: 300px
+}
