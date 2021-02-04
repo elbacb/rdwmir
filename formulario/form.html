@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="/registro" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+        </div>
+        <div>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo">
+        </div>
+        <div>
+            <label >Color:</label>
+            <select name="color">
+                <option value="" disabled selected> escoja color </option>
+                <option value="azul">azul</option>
+                <option value="morado">morado</option>
+                <option value="blanco">blanco</option>
+            </select>
+        </div>
+        <div>
+            <fieldset>
+                <label> talla s</label>
+                <input type="radio"  name="talla" value="s" >
+
+                <label> talla l</label>
+                <input type="radio" name="talla" value="l" >
+
+                <label> talla m</label>
+                <input type="radio" name="talla" value="m" >
+            </fieldset>
+        </div>
+
+        <fieldset>
+            <label > Comentario:
+                <textarea name="Comentario" cols="30" rows="10"></textarea>
+            </label>
+        </fieldset>
+        <button type="submit">pedir</button>
+    </form>
+
+</body>
+</html>
