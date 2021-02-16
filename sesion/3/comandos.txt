@@ -1,0 +1,5 @@
+cd
+mv
+rm: borrar archivos
+ls: listar archivos y carpetas
+pwd: ubicación actual
