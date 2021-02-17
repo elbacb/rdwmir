@@ -3,3 +3,18 @@ mv
 rm: borrar archivos
 ls: listar archivos y carpetas
 pwd: ubicación actual
+
+
+git push --set-upstream origin caracx || ¿git push origin main
+git branch -d caracx
+git checkout caracx
+git branch -D caracx
+git push --delete caracx
+git push --delete origin caracx 
+git log --graph --pretty=oneline --abbrev-commit
+docker container ls
+docker version
+#crear contenedor
+docker container run --name contenedor0 --publish 8080:80 nginx:latest
+#docker container run --name my-www-container --publish 8081:80 my-nginx-html 
+http://localhost:8080 (aparece nginx <- está corriendo en la máquina)
