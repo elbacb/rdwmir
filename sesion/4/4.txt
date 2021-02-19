@@ -1,0 +1,40 @@
+#correr JavaScript
+forma 1:
+sudo pacman -S nodejs npm
+
+forma 2:
+docker image ls
+(ir al repositorio de la imagen para ver cómo se usa la imagen)
+docker run --name my-node node
+docker run -it --rm --name my node
+
+#variables
+reasignables
+	var (no recomendable por ser global)
+	let (de alcance local)
+no reasignable
+	const (local)
+
+#instrucciones y expresiones
+expresiones:
+~ operaciones
+
+instrucción:
+orden, evalúa expresión y la ejecuta
+
+	const dividendo=10;
+	const divisor=11;
+	if (divisor==0)//expresiones
+
+	//instrucciones
+	{
+	console.log(`no es posible`);
+	}
+
+	else{
+	    //instrucciones
+	console.log(`${dividendo}`/`${divisor}`);
+	console.log(dividendo/divisor);
+	}
+
+# operador ternario
