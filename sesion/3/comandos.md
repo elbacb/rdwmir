@@ -22,6 +22,7 @@ git push --delete origin caracx
 
 #### crear contenedor:
 entrar como root o sudo siempre
+    
 	docker container run --name micontenedor0 --publish 8080:80 nginx:latest
 	#docker container run --name my-www-container --publish 8081:80 my-nginx-html
 
