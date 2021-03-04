@@ -46,5 +46,3 @@ const prod2 = 8;
 const total = prod1 + prod2;
 const valor = total >= 5 ? total-0.2*total: total;
 console.log(valor)
-
-/*reubicacion repo*/
