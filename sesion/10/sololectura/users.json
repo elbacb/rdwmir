@@ -1,0 +1,23 @@
+[
+{    
+    "id":1,
+    "username":"usuario1",
+    "email":"correo0@gmail.com",
+    "password":"12345678",
+    "createdDate":"01/01/2020"
+},
+{    
+    "id":2,
+    "username":"usuario2",
+    "email":"correo1@gmail.com",
+    "password":"1234sdfe78",
+    "createdDate":"01/01/2021"
+},
+{    
+    "id":3,
+    "username":"usuario3",
+    "email":"correo2@gmail.com",
+    "password":"123gh348",
+    "createdDate":"02/02/2020"
+}
+]

@@ -1,0 +1,21 @@
+{
+  "name": "archivos",
+  "version": "1.0.0",
+  "description": "manejador archivos con libreria faker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elbacb"
+  },
+  "keywords": [
+    "faker"
+  ],
+  "author": "elbacb",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^5.4.0"
+  }
+}
