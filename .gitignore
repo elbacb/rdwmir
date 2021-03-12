@@ -1,2 +1,5 @@
 1.md
 *.png
+**/node_modules/*
+.DS_Store
+.thumbs
