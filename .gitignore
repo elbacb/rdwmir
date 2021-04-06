@@ -1,5 +1,13 @@
+/sesiones/
 1.md
-*.png
+talento.jpg
+trucosArreglos.png
+*.pdf
 **/node_modules/*
+*/coverage/*
 .DS_Store
 .thumbs
+.env
+**/.env
+*.log
+**/logs/*

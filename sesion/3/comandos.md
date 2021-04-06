@@ -1,3 +1,7 @@
+instalaciíón de slack (no es tema de clase):
+
+https://snapcraft.io/install/slack/manjaro
+
 #### nueva rama caracx:
 ```
 git push --set-upstream origin caracx || ¿git push origin main
@@ -12,6 +16,13 @@ git push --delete origin caracx
 	git log --graph --pretty=oneline --abbrev-commit
 
 # Docker
+
+https://computingforgeeks.com/install-docker-ui-manager-portainer/
+
+https://platzi.com/clases/docker-2018/
+
+https://linuxconfig.org/manjaro-linux-docker-installation
+
 #### luego de instalarlo, si no corren los siguientes usar root o sudo siempre
 #### y si sale "docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?", correr (bajo root) el demonio docker:
 	systemctl start docker
