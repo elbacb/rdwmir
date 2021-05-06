@@ -34,7 +34,7 @@ console.log(resultadoDivison);
 //desctructure from function return
 const potencia1 = (n1 = 1, n2 = 1) => [n1 * n1, n2 * n2];
 /*
-function valores(n1, n2) {
+function potencia1(n1, n2) {
   return [n1 * n1, n2 * n2];
 }
 */
