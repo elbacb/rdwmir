@@ -68,3 +68,49 @@ const Persona = function (nombre, apellido) {
   const fuente = { n3: 3, n4: 4 };
   Object.assign(destino, fuente);
   console.log(destino);
+
+// Tu misión en este reto es crear una función constructora llamada Bus que herede
+//  los atributos y métodos de Car (que ya está definida) y tenga un método
+//  adicional llamado beep que retorne la cadena "BEEP!".
+// no solucionado como se esperaba "Se esperaba que Car fuera el prototipo de Bus"
+
+function Car() {
+  this.velocity = 0;
+}
+
+Car.prototype.accelerate = function(amount) {
+this.velocity += amount || 1;
+return this;
+}
+Car.prototype.break = function(amount) {
+this.velocity -= amount || 1;
+return this;
+};
+
+
+function Bus() {
+      const car= new Car();
+      this.velocity = car.velocity;
+      this.accelerate=car.accelerate;
+      this.break=car.break;
+      this.beep=function (){
+          return 'beep';
+      };
+};
+
+var bus = new Bus();
+console.log(bus.velocity);
+
+bus.accelerate();
+console.log(bus.velocity);
+
+bus.accelerate(2);
+console.log(bus.velocity);
+
+bus.break();
+console.log(bus.velocity);
+
+bus.break(2);
+console.log(bus.velocity);
+
+console.log(bus.beep());

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <section id="arena">
+      <div class="column"></div>
+      <div class="column"></div>
+    </section>
+    <section id="indicator">
+      <div class="column">
+        <div class="arrow"></div>
+      </div>
+      <div class="column"></div>
+    </section>
+    <section id="panel">
+      <div class="column">
+        <div class="dialog">
+          <p>
+            <span class="name">ivysaur</span>,
+            <span class="message">What attack do you want to use?</span>
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="moves">
+          <button class="button black">tackle</button>
+          <button class="button black">vine-whip</button>
+          <button class="button black">leech-seed</button>
+          <button class="button black">poison-powder</button>
+        </div>
+      </div>
+    </section>
+    <p id="disclaimer">
+      This is not an official pokemon game, this is only for educational
+      proposes
+    </p>
+    <script src="utils.js"></script>
+    <script src="state.js"></script>
+    <script src="pokemon.js"></script>
+    <script>
+      // Setup
+      function setup() {
+        const { pokemons = [] } = state;
+        const arena = document.getElementById("arena");
+        const columns = document.getElementsByClassName("column");
+
+        pokemons.forEach((pokemon, index) => {
+          const container = columns[index];
+          const [statusContainer, pokemonContainer] = choose(pokemon);
+
+          if (index === 0) {
+            container.appendChild(statusContainer);
+            container.appendChild(pokemonContainer);
+          } else {
+            container.appendChild(pokemonContainer);
+            container.appendChild(statusContainer);
+          }
+
+          const [bar] = container.getElementsByClassName("bar");
+          const [health] = container.getElementsByClassName("health");
+
+          pokemon._ui.bar = bar;
+          pokemon._ui.health = health;
+        });
+      }
+
+      function turn() {
+        const { pokemons = [], position = 0 } = state;
+        const pokemon = pokemons[position];
+
+        // Turn
+        const { newHealth, newPercentage } = calculateStatus(
+          pokemon.health.initial,
+          pokemon.health.current,
+          getRandomNumber(20)
+        );
+        const newBarColor = calculateBarColor(newPercentage);
+        const previousBarColor = pokemon.health.bar;
+
+        // Update State
+        pokemon.health.current = newHealth;
+        pokemon.health.bar = newBarColor;
+
+        // Update UI
+        pokemon._ui.bar.setAttribute("style", `width: ${newPercentage}%`);
+        pokemon._ui.bar.classList.remove(previousBarColor);
+        pokemon._ui.bar.classList.add(newBarColor);
+
+        pokemon._ui.health.textContent = `${pokemon.health.current}/${pokemon.health.initial}`;
+      }
+
+      setup();
+      const game = setInterval(function play() {
+        const { pokemons = [], position = 0 } = state;
+        const pokemon = pokemons[position];
+
+        turn();
+
+        if (pokemon.health.current === 0) {
+          clearInterval(game);
+        }
+
+        state.position = (state.position + 1) % 2;
+      }, 1000);
+    </script>
+  </body>
+</html>
